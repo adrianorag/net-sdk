@@ -186,17 +186,22 @@ namespace MercadoLibre.SDK
 
         public IRestResponse Get (string resource, List<Parameter> param)
 		{
-			bool containsAT = false;
-
+			
 			var request = new RestRequest (resource, Method.GET);
 			List<string> names = new List<string> ();
 			foreach (Parameter p in param) {
-				names.Add (p.Name + "={" + p.Name + "}");
-				if (p.Name.Equals ("access_token")) {
-					containsAT = true;
-				}
-				p.Type = ParameterType.UrlSegment;
-				request.AddParameter (p);
+
+                if (p.Type == ParameterType.HttpHeader)
+                {
+                    request.AddHeader(p.Name, p.Value.ToString());
+                }
+                else
+                {
+                    names.Add(p.Name + "={" + p.Name + "}");
+                    p.Type = ParameterType.UrlSegment;
+                    request.AddParameter(p);
+                }
+				
 			}
 
 			request.Resource = resource + "?" + String.Join ("&", names.ToArray ());
@@ -211,17 +216,19 @@ namespace MercadoLibre.SDK
 
 		public IRestResponse Post (string resource, List<Parameter> param, object body)
 		{
-			bool containsAT = false;
-
 			var request = new RestRequest (resource, Method.POST);
 			List<string> names = new List<string> ();
 			foreach (Parameter p in param) {
-				names.Add (p.Name + "={" + p.Name + "}");
-				if (p.Name.Equals ("access_token")) {
-					containsAT = true;
-				}
-				p.Type = ParameterType.UrlSegment;
-				request.AddParameter (p);
+                if (p.Type == ParameterType.HttpHeader)
+                {
+                    request.AddHeader(p.Name, p.Value.ToString());
+                }
+                else
+                {
+                    names.Add(p.Name + "={" + p.Name + "}");
+                    p.Type = ParameterType.UrlSegment;
+                    request.AddParameter(p);
+                }
 			}
 
 			request.Resource = resource + "?" + String.Join ("&", names.ToArray ());
@@ -241,19 +248,23 @@ namespace MercadoLibre.SDK
 
 		public IRestResponse Put (string resource, List<Parameter> param, object body)
 		{
-			bool containsAT = false;
-
+			
 			var request = new RestRequest (resource, Method.PUT);
 			List<string> names = new List<string> ();
-			foreach (Parameter p in param) {
-				names.Add (p.Name + "={" + p.Name + "}");
-				if (p.Name.Equals ("access_token")) {
-					containsAT = true;
-				}
-				p.Type = ParameterType.UrlSegment;
-				request.AddParameter (p);
-			}
-
+            foreach (Parameter p in param)
+            {
+                if (p.Type == ParameterType.HttpHeader)
+                {
+                    request.AddHeader(p.Name, p.Value.ToString());
+                }
+                else
+                {
+                    names.Add(p.Name + "={" + p.Name + "}");
+                    p.Type = ParameterType.UrlSegment;
+                    request.AddParameter(p);
+                }
+                
+            }
 			request.Resource = resource + "?" + String.Join ("&", names.ToArray ());
 
 			request.AddHeader ("Accept", "application/json");
@@ -264,25 +275,29 @@ namespace MercadoLibre.SDK
 
 			var response = ExecuteRequest (request);
 
-           
 
 			return response;
 		}
 
 		public IRestResponse Delete (string resource, List<Parameter> param)
 		{
-			bool containsAT = false;
-
+			
 			var request = new RestRequest (resource, Method.DELETE);
 			List<string> names = new List<string> ();
-			foreach (Parameter p in param) {
-				names.Add (p.Name + "={" + p.Name + "}");
-				if (p.Name.Equals ("access_token")) {
-					containsAT = true;
-				}
-				p.Type = ParameterType.UrlSegment;
-				request.AddParameter (p);
-			}
+            foreach (Parameter p in param)
+            {
+                if (p.Type == ParameterType.HttpHeader)
+                {
+                    request.AddHeader(p.Name, p.Value.ToString());
+                }
+                else
+                {
+                    names.Add(p.Name + "={" + p.Name + "}");
+                    p.Type = ParameterType.UrlSegment;
+                    request.AddParameter(p);
+                }
+                
+            }
 
 			request.Resource = resource + "?" + String.Join ("&", names.ToArray ());
 

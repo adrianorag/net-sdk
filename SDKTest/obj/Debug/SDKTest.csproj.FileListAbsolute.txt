@@ -28,3 +28,13 @@ C:\Users\Win 10\Documents\arquivos_dotnet\net-sdk-master\SDKTest\bin\Debug\net-s
 C:\Users\Win 10\Documents\arquivos_dotnet\net-sdk-master\SDKTest\obj\Debug\SDKTest.csprojResolveAssemblyReference.cache
 C:\Users\Win 10\Documents\arquivos_dotnet\net-sdk-master\SDKTest\obj\Debug\SDKTest.dll
 C:\Users\Win 10\Documents\arquivos_dotnet\net-sdk-master\SDKTest\obj\Debug\SDKTest.pdb
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\bin\Debug\SDKTest.dll
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\bin\Debug\SDKTest.pdb
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\bin\Debug\net-sdk.dll
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\bin\Debug\nunit.framework.dll
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\bin\Debug\RestSharp.dll
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\bin\Debug\Newtonsoft.Json.dll
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\bin\Debug\net-sdk.pdb
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\obj\Debug\SDKTest.csprojResolveAssemblyReference.cache
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\obj\Debug\SDKTest.dll
+D:\inetpub\wwwroot\Produto\Api-external\MercadoLivre\net-sdk\SDKTest\obj\Debug\SDKTest.pdb

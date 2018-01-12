@@ -3,3 +3,15 @@ net-sdk.userprefs
 .DS_Store
 SDK/.DS_Store
 .vs/net-sdk/v14
+net-sdk.v11.suo
+
+# Build results
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+[Oo]bj/
+
+*.Cache
